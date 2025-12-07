@@ -1,10 +1,9 @@
 #grid {
   display: grid;
-  grid-template-columns: repeat(4, 242.5px);
-  grid-template-rows: repeat(5, 124px);
+  grid-template-rows: 124px 124px 124px 124px 124px;
+  grid-template-columns: 242.5px 242.5px 242.5px 242.5px;
   grid-gap: 10px 10px;
 }
-
 #grid > div {
   background: green;
   color: white;
@@ -12,24 +11,19 @@
   padding: 10px;
 }
 
-/* Cypress Tests Expect These EXACT Values */
-
 #grid > div:nth-child(1) {
-  grid-column: span 4;
+  grid-column: span 4 / auto;
 }
 
 #grid > div:nth-child(2) {
-  grid-row: span 4;
+  grid-row: span 4 / auto;
 }
 
-#grid > div:nth-child(4) {
-  grid-column: span 2;
-}
-
+#grid > div:nth-child(4),
 #grid > div:nth-child(5) {
-  grid-column: span 2;
+  grid-column: span 2 / auto;
 }
 
 #grid > div:nth-child(10) {
-  grid-column: span 3;
+  grid-column: span 3 / auto;
 }
