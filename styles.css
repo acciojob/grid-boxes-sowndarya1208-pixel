@@ -1,1 +1,55 @@
 /*  your css code here. If applicable */
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 80px;
+  gap: 5px;
+}
+
+.item {
+  background: green;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+
+/* Layout positioning */
+.item1 {
+  grid-column: 1 / 4;   /* full row */
+}
+
+.item2 {
+  grid-row: 2 / 5;      /* tall left block */
+}
+
+.item3 {
+  grid-column: 2 / 2;
+}
+
+.item4 {
+  grid-column: 3/ 4;
+}
+
+.item5 {
+  grid-column: 2 / 3;
+}
+
+.item6 {
+  grid-column: 4/ 4;
+}
+
+.item7 {
+  grid-column: 2 / 4;
+}
+
+.item8 {
+  grid-column: 3 / 4;
+}
+
+.item9 {
+  grid-column: 4/ 4;   /* same row as item8 */
+}
+
+.item10 {
+  grid-column: 2 / 4;   /* wide bottom */
+}
